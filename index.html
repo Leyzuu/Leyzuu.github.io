@@ -107,10 +107,12 @@
             max-height: 0;
             opacity: 0;
             overflow: hidden;
+            pointer-events: none; /* Fixes clicking through when hidden */
         }
         #mobile-menu.open {
             max-height: 400px;
             opacity: 1;
+            pointer-events: auto;
         }
     </style>
 </head>
@@ -144,7 +146,8 @@
                 </button>
             </div>
             
-            <div class="items-center justify-between w-full md:flex md:w-auto md:order-1" id="navbar-sticky">
+            <!-- FIXED: Added 'hidden' class to hide this on mobile by default -->
+            <div class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1" id="navbar-sticky">
                 <ul class="flex flex-col p-4 md:p-0 mt-4 font-medium border border-slate-100 rounded-lg bg-slate-50 md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-transparent dark:bg-slate-800 md:dark:bg-transparent dark:border-slate-700">
                     <li>
                         <a href="#home" class="block py-2 px-3 text-white bg-primary-600 rounded md:bg-transparent md:text-primary-600 md:p-0 md:dark:text-primary-500" aria-current="page">Home</a>
@@ -213,7 +216,6 @@
             <div class="relative reveal delay-200">
                 <!-- Image Container -->
                 <div class="relative rounded-2xl overflow-hidden border border-slate-200 dark:border-slate-700 shadow-2xl animate-float bg-slate-100 dark:bg-slate-800 aspect-square md:aspect-[4/3] group">
-                    <!-- YOUR IMAGE HERE -->
                     <img src="475838174_1665446944052652_4875807394730473678_n.jpg" 
                          alt="Leyz Vasquez" 
                          class="w-full h-full object-cover relative z-10 transition-transform duration-500 group-hover:scale-105"
