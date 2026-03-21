@@ -241,6 +241,9 @@
                     <button onclick="switchTab('about')" class="nav-btn interactive-el flex items-center gap-3 rounded-xl px-4 py-3 text-sm font-medium w-full text-slate-500 border-transparent hover:bg-slate-100 hover:text-slate-800 dark:text-neutral-400 dark:hover:bg-white/5 dark:hover:text-white border dark:border-transparent dark:hover:border-white/5 transition-colors" data-target="about">
                         <i data-lucide="user" class="w-5 h-5"></i> About Me
                     </button>
+                    <button onclick="switchTab('contact')" class="nav-btn interactive-el flex items-center gap-3 rounded-xl px-4 py-3 text-sm font-medium w-full text-slate-500 border-transparent hover:bg-slate-100 hover:text-slate-800 dark:text-neutral-400 dark:hover:bg-white/5 dark:hover:text-white border dark:border-transparent dark:hover:border-white/5 transition-colors" data-target="contact">
+                        <i data-lucide="mail" class="w-5 h-5"></i> Contact
+                    </button>
                 </nav>
             </div>
 
@@ -250,6 +253,7 @@
                     <button onclick="switchTab('overview')" class="mobile-nav-btn interactive-el px-5 py-2.5 rounded-full text-sm font-bold whitespace-nowrap bg-slate-900 text-white dark:bg-white dark:text-black transition-transform active:scale-95" data-target="overview">Overview</button>
                     <button onclick="switchTab('projects')" class="mobile-nav-btn interactive-el px-5 py-2.5 rounded-full text-sm font-bold whitespace-nowrap bg-white text-slate-600 border border-slate-200 dark:bg-neutral-900 dark:text-neutral-400 dark:border-white/10 transition-transform active:scale-95" data-target="projects">Project Showcase</button>
                     <button onclick="switchTab('about')" class="mobile-nav-btn interactive-el px-5 py-2.5 rounded-full text-sm font-bold whitespace-nowrap bg-white text-slate-600 border border-slate-200 dark:bg-neutral-900 dark:text-neutral-400 dark:border-white/10 transition-transform active:scale-95" data-target="about">About Me</button>
+                    <button onclick="switchTab('contact')" class="mobile-nav-btn interactive-el px-5 py-2.5 rounded-full text-sm font-bold whitespace-nowrap bg-white text-slate-600 border border-slate-200 dark:bg-neutral-900 dark:text-neutral-400 dark:border-white/10 transition-transform active:scale-95" data-target="contact">Contact</button>
                 </div>
 
                 <div id="overview" class="tab-content space-y-6 fade-in">
@@ -503,26 +507,99 @@
                                         </div>
                                     </div>
                                 </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
-                                <h3 class="text-xl font-bold text-slate-900 dark:text-white mt-12 mb-6 flex items-center gap-3">
-                                    <i data-lucide="contact" class="w-5 h-5 text-slate-500 dark:text-neutral-400"></i> Contact Information
-                                </h3>
-                                <div class="flex flex-col sm:flex-row gap-4">
-                                    <button onclick="copyEmail()" aria-label="Copy Email" class="copy-btn interactive-el flex items-center justify-center gap-3 rounded-xl bg-slate-900 text-white hover:bg-slate-800 dark:bg-white px-8 py-4 text-sm font-bold dark:text-black dark:hover:bg-neutral-200 shadow-lg shadow-slate-300 dark:shadow-white/10">
-                                        <i data-lucide="mail" class="w-5 h-5"></i>
-                                        <span>Copy Email</span>
+                <div id="contact" class="tab-content hidden fade-in">
+                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+                        
+                        <!-- Left: Info Cards -->
+                        <div class="spotlight-card p-8 interactive-hover smooth-return slide-up text-center lg:text-left flex flex-col justify-center">
+                            <div class="spotlight-overlay"></div>
+                            <div class="relative z-20 inner-content">
+                                <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-blue-100 border border-blue-200 text-blue-600 dark:bg-blue-500/10 dark:border-blue-500/20 dark:text-blue-400 text-xs font-bold uppercase tracking-widest mb-6 shadow-lg shadow-blue-500/5">
+                                    <span class="relative flex h-2 w-2">
+                                        <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-blue-400 opacity-75"></span>
+                                        <span class="relative inline-flex rounded-full h-2 w-2 bg-blue-500"></span>
+                                    </span>
+                                    Get In Touch
+                                </div>
+                                <h2 class="text-3xl md:text-4xl font-extrabold text-slate-900 dark:text-white tracking-tight mb-4">Let's build something awesome.</h2>
+                                <p class="text-slate-600 dark:text-neutral-400 mb-8 font-medium">Have a project in mind or just want to say hi? Feel free to reach out to me through any of these platforms.</p>
+                                
+                                <div class="flex flex-col gap-4">
+                                    <button onclick="copyEmail()" class="copy-btn group interactive-el flex items-center gap-4 rounded-2xl p-4 bg-white text-slate-700 border border-slate-200 hover:bg-slate-50 dark:border-white/10 dark:bg-white/5 dark:text-white dark:hover:bg-white/10 transition-all duration-300 w-full text-left">
+                                        <div class="p-3 bg-red-100 text-red-600 rounded-xl dark:bg-red-500/20 dark:text-red-400">
+                                            <i data-lucide="mail" class="w-6 h-6"></i>
+                                        </div>
+                                        <div>
+                                            <span class="block text-xs font-bold text-slate-500 dark:text-neutral-400 mb-1">Email Me</span>
+                                            <span class="block text-sm font-bold copy-btn-text">Leyzvasquez@gmail.com</span>
+                                        </div>
                                     </button>
-                                    <a href="https://www.linkedin.com/in/john-ley-lucky-vasquez-a115a83b2" target="_blank" rel="noreferrer" aria-label="LinkedIn Profile" class="interactive-el flex items-center justify-center gap-3 rounded-xl bg-white text-slate-700 border border-slate-300 hover:bg-slate-50 hover:text-blue-600 hover:border-blue-300 dark:border-white/20 dark:bg-white/5 px-8 py-4 text-sm font-bold dark:text-white dark:hover:bg-blue-600/20 dark:hover:border-blue-500/50 dark:hover:text-blue-400 transition-colors">
-                                        <i data-lucide="linkedin" class="w-5 h-5"></i>
-                                        LinkedIn
+                                    
+                                    <a href="https://github.com/Leyzuu" target="_blank" rel="noreferrer" class="group interactive-el flex items-center gap-4 rounded-2xl p-4 bg-white text-slate-700 border border-slate-200 hover:bg-slate-50 dark:border-white/10 dark:bg-white/5 dark:text-white dark:hover:bg-white/10 transition-all duration-300 w-full text-left">
+                                        <div class="p-3 bg-slate-100 text-slate-700 rounded-xl dark:bg-white/10 dark:text-slate-300">
+                                            <i data-lucide="github" class="w-6 h-6"></i>
+                                        </div>
+                                        <div>
+                                            <span class="block text-xs font-bold text-slate-500 dark:text-neutral-400 mb-1">GitHub</span>
+                                            <span class="block text-sm font-bold">Leyzuu</span>
+                                        </div>
                                     </a>
-                                    <a href="tel:+639000000000" aria-label="Call Phone Number" class="interactive-el flex items-center justify-center gap-3 rounded-xl bg-white text-slate-700 border border-slate-300 hover:bg-slate-50 hover:text-emerald-600 hover:border-emerald-300 dark:border-white/20 dark:bg-white/5 px-8 py-4 text-sm font-bold dark:text-white dark:hover:bg-emerald-600/20 dark:hover:border-emerald-500/50 dark:hover:text-emerald-400 transition-colors">
-                                        <i data-lucide="phone" class="w-5 h-5"></i>
-                                        Phone Number
+                                    
+                                    <a href="https://www.linkedin.com/in/john-ley-lucky-vasquez-a115a83b2" target="_blank" rel="noreferrer" class="group interactive-el flex items-center gap-4 rounded-2xl p-4 bg-white text-slate-700 border border-slate-200 hover:bg-slate-50 dark:border-white/10 dark:bg-white/5 dark:text-white dark:hover:bg-white/10 transition-all duration-300 w-full text-left">
+                                        <div class="p-3 bg-blue-100 text-blue-600 rounded-xl dark:bg-blue-500/20 dark:text-blue-400">
+                                            <i data-lucide="linkedin" class="w-6 h-6"></i>
+                                        </div>
+                                        <div>
+                                            <span class="block text-xs font-bold text-slate-500 dark:text-neutral-400 mb-1">LinkedIn</span>
+                                            <span class="block text-sm font-bold">John Ley Lucky Vasquez</span>
+                                        </div>
+                                    </a>
+
+                                    <a href="tel:+639000000000" class="group interactive-el flex items-center gap-4 rounded-2xl p-4 bg-white text-slate-700 border border-slate-200 hover:bg-slate-50 dark:border-white/10 dark:bg-white/5 dark:text-white dark:hover:bg-white/10 transition-all duration-300 w-full text-left">
+                                        <div class="p-3 bg-emerald-100 text-emerald-600 rounded-xl dark:bg-emerald-500/20 dark:text-emerald-400">
+                                            <i data-lucide="phone" class="w-6 h-6"></i>
+                                        </div>
+                                        <div>
+                                            <span class="block text-xs font-bold text-slate-500 dark:text-neutral-400 mb-1">Phone Number</span>
+                                            <span class="block text-sm font-bold">+639 123 456 789</span>
+                                        </div>
                                     </a>
                                 </div>
                             </div>
                         </div>
+
+                        <!-- Right: Direct Message Form -->
+                        <div class="spotlight-card p-8 interactive-hover smooth-return slide-up" style="transition-delay: 100ms;">
+                            <div class="spotlight-overlay"></div>
+                            <div class="relative z-20 inner-content h-full flex flex-col">
+                                <h3 class="text-2xl font-bold text-slate-900 dark:text-white mb-6">Send a Message</h3>
+                                <form onsubmit="event.preventDefault(); window.location.href='mailto:Leyzvasquez@gmail.com?subject=' + encodeURIComponent(document.getElementById('subject').value) + '&body=' + encodeURIComponent(document.getElementById('message').value);" class="space-y-4 flex-1 flex flex-col">
+                                    <div class="grid grid-cols-1 gap-4">
+                                        <div class="space-y-1.5">
+                                            <label for="name" class="text-sm font-bold text-slate-700 dark:text-neutral-300">Name</label>
+                                            <input type="text" id="name" placeholder="John Doe" class="w-full px-4 py-3 rounded-xl bg-slate-50 border border-slate-200 text-slate-900 focus:outline-none focus:ring-2 focus:ring-red-500/50 dark:bg-black/40 dark:border-white/10 dark:text-white dark:placeholder-neutral-500 transition-all" required>
+                                        </div>
+                                        <div class="space-y-1.5">
+                                            <label for="subject" class="text-sm font-bold text-slate-700 dark:text-neutral-300">Subject</label>
+                                            <input type="text" id="subject" placeholder="Project Inquiry" class="w-full px-4 py-3 rounded-xl bg-slate-50 border border-slate-200 text-slate-900 focus:outline-none focus:ring-2 focus:ring-red-500/50 dark:bg-black/40 dark:border-white/10 dark:text-white dark:placeholder-neutral-500 transition-all" required>
+                                        </div>
+                                        <div class="space-y-1.5 flex-1 flex flex-col">
+                                            <label for="message" class="text-sm font-bold text-slate-700 dark:text-neutral-300">Message</label>
+                                            <textarea id="message" rows="4" placeholder="Hello, I'd like to discuss..." class="w-full h-full min-h-[120px] px-4 py-3 rounded-xl bg-slate-50 border border-slate-200 text-slate-900 focus:outline-none focus:ring-2 focus:ring-red-500/50 dark:bg-black/40 dark:border-white/10 dark:text-white dark:placeholder-neutral-500 transition-all resize-none" required></textarea>
+                                        </div>
+                                    </div>
+                                    <button type="submit" class="interactive-el mt-4 w-full flex justify-center items-center gap-2 rounded-xl bg-slate-900 text-white hover:bg-slate-800 dark:bg-white px-6 py-4 text-sm font-bold dark:text-black transition-all duration-300 hover:shadow-lg dark:hover:bg-neutral-200 active:scale-95">
+                                        Send Message <i data-lucide="send" class="w-4 h-4"></i>
+                                    </button>
+                                </form>
+                            </div>
+                        </div>
+
                     </div>
                 </div>
 
@@ -718,14 +795,14 @@
         function copyEmail() {
             navigator.clipboard.writeText("Leyzvasquez@gmail.com");
             
-            const copyBtns = document.querySelectorAll('.copy-btn span');
+            const copyBtns = document.querySelectorAll('.copy-btn-text');
             copyBtns.forEach(span => {
                 span.textContent = "Copied!";
             });
 
             setTimeout(() => {
                 copyBtns.forEach(span => {
-                    span.textContent = "Copy Email";
+                    span.textContent = "Leyzvasquez@gmail.com";
                 });
             }, 2000);
         }
